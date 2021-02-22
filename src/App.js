@@ -1,18 +1,29 @@
 import ProductsList from "./components/ProductsList";
-import { ListWrapper, GlobalStyle } from "./styles";
+import { ListWrapper, GlobalStyle, ThemeButton } from "./styles";
 import Home from "./components/Home";
 import { ThemeProvider } from "styled-components";
+import { useState } from "react";
 
 const theme = {
-  mainColor: "black",
-  backgroundColor: "#c5c5c7",
-  blue: "#006191",
+  light: {
+    mainColor: "#242424",
+    backgroundColor: "#fefafb",
+  },
+  dark: {
+    mainColor: "#fefafb",
+    backgroundColor: "#242424",
+  },
 };
 
 function App() {
+  const [currentTheme, setCurrentTheme] = useState("light");
+
+  const toggleTheme = () =>
+    setCurrentTheme(currentTheme === "light" ? "dark" : "light");
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme[currentTheme]}>
+        <ThemeButton onClick={toggleTheme}>{[currentTheme]} mode</ThemeButton>
         <GlobalStyle />
         <Home />
         <ListWrapper>
