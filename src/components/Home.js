@@ -1,11 +1,11 @@
 import logo from "../Logo.jpg";
-import styles from "../styles";
+import { Description, Title } from "../styles";
 
 function Home() {
   return (
     <>
-      <h1 style={styles.text}>The Faker's Bakers</h1>
-      <h3 style={styles.text}>Get your carb fix!</h3>
+      <Title>The Faker's Bakers</Title>
+      <Description>Get your carb fix!</Description>
       <img alt="shop logo" src={logo} />
     </>
   );

@@ -1,14 +1,14 @@
-import styles from "../styles";
+import { Paragraph, ProductImage, ItemWrapper } from "../styles";
 
 const ProductItem = (props) => {
   const product = props.product;
 
   return (
-    <div style={styles.itemWrapper}>
-      <p style={styles.text}>{product.name}</p>
-      <img src={product.image} style={styles.productImage} />
-      <p style={styles.text}>{product.price} KD</p>
-    </div>
+    <ItemWrapper>
+      <Paragraph>{product.name}</Paragraph>
+      <ProductImage src={product.image} />
+      <Paragraph>{product.price} KD</Paragraph>
+    </ItemWrapper>
   );
 };
 
