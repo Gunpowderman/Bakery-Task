@@ -1,11 +1,14 @@
-import logo from "./Logo.jpg";
+import ProductsList from "./components/ProductsList";
+import styles from "./styles";
+import Home from "./components/Home";
 
 function App() {
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>The Faker's Bakers</h1>
-      <h3 style={{ textAlign: "center" }}>Get your carb fix!</h3>
-      <img alt="shop logo" src={logo} />
+      <Home />
+      <div style={styles.list}>
+        <ProductsList />
+      </div>
     </>
   );
 }
