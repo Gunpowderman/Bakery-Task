@@ -1,8 +1,11 @@
 import ProductsList from "./components/ProductsList";
-import { ListWrapper, GlobalStyle, ThemeButton } from "./styles";
+import { GlobalStyle, ThemeButton } from "./styles";
 import Home from "./components/Home";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
+import { Route, Switch } from "react-router";
+import { Link } from "react-router-dom";
+// import NavBar from "./components/NavBar";
 
 const theme = {
   light: {
@@ -27,10 +30,16 @@ function App() {
           {currentTheme === "light" ? "dark" : "light"} mode
         </ThemeButton>
         <GlobalStyle />
-        <Home />
-        <ListWrapper>
-          <ProductsList />
-        </ListWrapper>
+        <Link to="/">Home </Link>
+        <Link to="/products">Products </Link>
+        <Switch>
+          <Route path="/products">
+            <ProductsList />
+          </Route>
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
       </ThemeProvider>
     </>
   );

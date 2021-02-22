@@ -1,4 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { Link } from "react-router-dom";
+
+// export const Brand = styled(Link)`
+//   padding: 0.75em;
+
+//   img {
+//     width: 8rem;
+//   }
+// `;
 
 const GlobalStyle = createGlobalStyle`
   body {
