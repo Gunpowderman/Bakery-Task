@@ -23,7 +23,9 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme[currentTheme]}>
-        <ThemeButton onClick={toggleTheme}>{[currentTheme]} mode</ThemeButton>
+        <ThemeButton onClick={toggleTheme}>
+          {currentTheme === "light" ? "dark" : "light"} mode
+        </ThemeButton>
         <GlobalStyle />
         <Home />
         <ListWrapper>
