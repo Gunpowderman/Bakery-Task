@@ -1,12 +1,12 @@
 import logo from "../Logo.jpg";
-import { Description, Title } from "../styles";
+import { Description, Title, HomeImage } from "../styles";
 
 function Home() {
   return (
     <>
       <Title>The Faker's Bakers</Title>
       <Description>Get your carb fix!</Description>
-      <img alt="shop logo" src={logo} />
+      <HomeImage alt="shop logo" src={logo} />
     </>
   );
 }

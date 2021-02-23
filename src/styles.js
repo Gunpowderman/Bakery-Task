@@ -1,13 +1,23 @@
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "react-router-dom";
 
-// export const Brand = styled(Link)`
-//   padding: 0.75em;
+const SearchBarStyle = styled.input`
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 40%;
+`;
 
-//   img {
-//     width: 8rem;
-//   }
-// `;
+const Brand = styled(Link)`
+  img {
+    width: 4rem;
+  }
+`;
+
+const HomeImage = styled.img`
+  max-width: 100%;
+  height: auto;
+`;
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -18,8 +28,9 @@ const GlobalStyle = createGlobalStyle`
 
 const ThemeButton = styled.button`
   font-size: 1em;
-  margin: 1.25em;
+  margin: 0.75em;
   padding: 0.25em 1em;
+  width: 115px;
   border-radius: 3px;
   background-color: ${(props) => props.theme.mainColor};
   color: ${(props) => props.theme.backgroundColor};
@@ -63,6 +74,9 @@ export {
   Paragraph,
   GlobalStyle,
   ThemeButton,
+  Brand,
+  HomeImage,
+  SearchBarStyle,
 };
 
 // const styles = {
